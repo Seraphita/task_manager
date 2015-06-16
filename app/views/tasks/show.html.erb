@@ -1,0 +1,12 @@
+<h1><%= @task.title %></h1>
+<% if @task.done %>
+  Cette tâche est terminée :D
+<% else %>
+  Cette tâche reste à faire...
+<% end %>
+<br>
+<br>
+<%= link_to "Revenir à la liste", tasks_path(@task) %>
+<%= link_to "Modifier", edit_task_path(@task) %>
+<%= link_to "Supprimer", edit_task_path(@task) %>
+
